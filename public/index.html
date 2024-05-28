@@ -10,20 +10,6 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css" />
 
-    <script>
-      document.addEventListener('DOMContentLoaded', function () {
-        if ('%NODE_ENV%' === 'production') {
-          const metaTags = `
-            <meta name="description" content="This app provides end-to-end information about the Global Coffee Industry" />
-            <meta property="og:title" content="www.coffeeweb.com" />
-            <meta property="og:description" content="This app provides end-to-end information about the Global Coffee Industry" />
-            <meta property="og:url" content="www.coffeeweb.com" />
-            <meta property="og:type" content="website" />
-          `
-          document.head.insertAdjacentHTML('beforeend', metaTags)
-        }
-      })
-    </script>
 
     <style>
       body {
