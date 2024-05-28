@@ -27,7 +27,8 @@
         // Detect environment
         var environment = (function() {
             // Check if the hostname contains a specific string to identify production
-            if (window.location.hostname.includes('https://main--example1234900.netlify.app')) {
+            if (window.location.hostname.includes('main--example1234900.netlify.app')) {
+                console.log(window.location.hostname)
                 return 'production';
             } else {
                 return 'development';
