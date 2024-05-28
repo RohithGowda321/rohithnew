@@ -10,27 +10,28 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css" />
 
-    <script>
-      document.addEventListener('DOMContentLoaded', function () {
-        if ('%NODE_ENV%' === 'production') {
-          const metaTags = `
-            <meta name="description" content="This app provides end-to-end information about the Global Coffee Industry" />
-            <meta property="og:title" content="www.coffeeweb.com" />
-            <meta property="og:url" content="www.coffeeweb.com" />
-            <meta property="og:type" content="website" />
-          `
-          document.head.insertAdjacentHTML('beforeend', metaTags)
-        }
-      <meta property="og:image" content="https://coffeeweb.s3.ap-south-1.amazonaws.com/coffeeweb_menu_icons/CoffeeWeb_Logo_White_Background_Blue_Text.png" />  
-      })
-    </script>
-
     <style>
       body {
         position: relative !important;
         top: 0px !important;
       }
     </style>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        if ('%NODE_ENV%' === 'production') {
+          const metaTags = `
+        <meta name="description" content="This app provides end-to-end information about the Global Coffee Industry" />
+        <meta property="og:title" content="www.coffeeweb.com" />
+        <meta property="og:description" content="This app provides end-to-end information about the Global Coffee Industry" />
+        <meta property="og:url" content="www.coffeeweb.com" />
+        <meta property="og:type" content="website" />
+      `
+          document.head.insertAdjacentHTML('beforeend', metaTags)
+          ;('<meta property="og:image" content="https://coffeeweb.s3.ap-south-1.amazonaws.com/coffeeweb_menu_icons/CoffeeWeb_Logo_White_Background_Blue_Text.png" />')
+        }
+      })
+    </script>
 
     <title class="font-bold">CoffeeWeb</title>
   </head>
