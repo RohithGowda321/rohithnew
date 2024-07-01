@@ -1,22 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#000000" />
+  <meta charset="utf-8">
+  <link rel="icon" href="%PUBLIC_URL%/favicon.ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>React App</title>
+  <!-- Other static meta tags -->
 
-  <!-- <meta property="og:url" content="www.coffeeweb.com" />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="https://coffeeweb.s3.ap-south-1.amazonaws.com/coffeeweb_menu_icons/CoffeeWeb_Logo_White_Background_Blue_Text.png" /> -->
+  <!-- JavaScript for conditional meta tag -->
+  <script>
+      const isProd = (window.location.hostname === 'https://main--meta-new.netlify.app') 
 
-  <meta name="description" content="<%- process.env.NODE_ENV === 'production' ? 'This app provides end-to-end information about the Global Coffee Industry' : 'This is the development description' %>" />
-  <meta property="og:title" content="<%- process.env.NODE_ENV === 'production' ? 'www.coffeeweb.com' : 'Development Website' %>" />
 
-  </head>
+    if (isProd) {
+      var metaTag = document.createElement('meta');
+      metaTag.setAttribute('property', 'og:image');
+      metaTag.setAttribute('content', 'https://coffeeweb.s3.ap-south-1.amazonaws.com/coffeeweb_menu_icons/CoffeeWeb_Logo_White_Background_Blue_Text.png');
+      document.head.appendChild(metaTag);
+    }
+  </script>
+</head>
 <body>
-  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <noscript>
+    You need to enable JavaScript to run this app.
+  </noscript>
   <div id="root"></div>
-
-  </body>
+</body>
 </html>
